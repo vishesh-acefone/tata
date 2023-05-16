@@ -18,12 +18,19 @@ spec:
         image: php:7.1.33-apache-buster
         command: ["/bin/bash"]
         tty: true
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "1"
+
+
 
       - name: nginx
         image: nginx
         ports:
         - containerPort: 80
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "2"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "1"
+
