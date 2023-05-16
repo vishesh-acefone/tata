@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: web-tata-argocd
+  name: web-tata
   namespace: argocd
 spec:
   destination:
