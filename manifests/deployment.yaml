@@ -13,6 +13,11 @@ spec:
       labels:
         app: web-live
     spec:
+
+      volumes:
+        - name: env-conf
+          configMap:
+            name: env-conf
       containers:
       - name: php
         image: php:7.1.33-apache-buster
@@ -33,4 +38,10 @@ spec:
         #   limits:
         #     memory: "20Mi"
         #     cpu: "0.5"
+
+        volumeMounts:
+          - mountPath: /root/config.txt
+            name: env-conf
+            subPath: config.txt
+
 

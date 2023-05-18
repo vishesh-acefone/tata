@@ -7,10 +7,15 @@ spec:
   destination:
     namespace: web
     server: "https://kubernetes.default.svc"
-  source:
-    path: manifests
-    repoURL: "https://github.com/vishesh-acefone/tata"
-    targetRevision: main
+  sources:
+    - repoURL: "https://github.com/vishesh-acefone/tata"
+      path: manifests
+      targetRevision: main
+    
+    - repoURL: "https://github.com/vishesh-acefone/tata-config"
+      path: web
+      targetRevision: main
+
   project: default
   syncPolicy:
     automated:
