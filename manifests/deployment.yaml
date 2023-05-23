@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-live
-  namespace: web
+  name: web-sandbox
+  namespace: web-sandbox
 spec:
   selector:
     matchLabels:
-      app: web-live
+      app: web-sandbox
   replicas: 10 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: web-live
+        app: web-sandbox
     spec:
 
       volumes:
