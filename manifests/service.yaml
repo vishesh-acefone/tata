@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: web-svc
-  namespace: web-sandbox
+  namespace: web
   # labels:
   #   run: web-svc
 spec:
@@ -10,5 +10,5 @@ spec:
   - port: 80
     protocol: TCP
   selector:
-    app: web-sandbox
+    app: web
 
